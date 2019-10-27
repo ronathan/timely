@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">timely</string>
+
+    <string name="splash_screen_title">Timely</string>
+</resources>
