@@ -8,6 +8,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        style="@style/h2_white_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timely"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         style="@style/timer"
         app:layout_constraintBottom_toBottomOf="parent"

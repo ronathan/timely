@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.text.format.DateUtils
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import butterknife.BindView
@@ -15,6 +16,8 @@ import com.ronathan.utils.Stopwatch
 class TimerActivity : AppCompatActivity() {
 
     companion object {
+
+        const val TIMER_DELAY = 1000L
         fun createIntent(context: Context): Intent {
             return Intent(context, TimerActivity::class.java)
         }
@@ -45,7 +48,7 @@ class TimerActivity : AppCompatActivity() {
         override fun run() {
             if (isRunning) {
                 setTimerText(stopwatch.elapsedTime)
-                handler.postDelayed(this, 100)
+                handler.postDelayed(this, TIMER_DELAY)
             }
         }
     }
@@ -59,6 +62,6 @@ class TimerActivity : AppCompatActivity() {
     }
 
     private fun setTimerText(time: Long) {
-        timerTextView.text = time.toString()
+        timerTextView.text = DateUtils.formatElapsedTime(time / TIMER_DELAY)
     }
 }
