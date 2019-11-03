@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text -->
+    <dimen name="h1">24sp</dimen>
+    <dimen name="h2">18sp</dimen>
+    <dimen name="h3">16sp</dimen>
+    <dimen name="body">12sp</dimen>
+    <dimen name="notification">12sp</dimen>
+
+    <!-- Pills -->
+    <dimen name="pill_radius">16dp</dimen>
+</resources>

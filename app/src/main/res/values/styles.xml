@@ -8,17 +8,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="splash_screen_text">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">italic</item>
+    </style>
 
     <style name="h1">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/h1</item>
     </style>
 
     <style name="h2">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/h2</item>
     </style>
 
     <style name="h3">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/h3</item>
     </style>
 
     <style name="timer_text" parent="h1">
