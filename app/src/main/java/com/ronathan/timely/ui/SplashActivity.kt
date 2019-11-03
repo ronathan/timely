@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.ronathan.timely.R.layout
+import com.ronathan.timely.ui.timer.TimerActivity
 
 /**
  * Landing page for Timely

@@ -12,6 +12,7 @@
 
     <!-- Padding -->
     <dimen name="activity_padding">16dp</dimen>
+    <dimen name="container_padding">16dp</dimen>
 
     <!-- Pills -->
     <dimen name="pill_radius">16dp</dimen>

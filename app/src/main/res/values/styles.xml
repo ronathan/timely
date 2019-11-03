@@ -61,4 +61,36 @@
         <item name="android:orientation">vertical</item>
     </style>
 
+    <!-- Form Input Fields -->
+    <style name="text_input_layout_style" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxCornerRadiusTopStart">4dp</item>
+        <item name="boxCornerRadiusTopEnd">4dp</item>
+    </style>
+
+    <style name="text_input_layout_theme">
+        <item name="hintTextAppearance">@style/text_input_hint</item>
+        <item name="errorTextAppearance">@style/text_input_error</item>
+        <item name="android:textColor">@color/blue_dark</item>
+        <item name="android:textColorHint">@color/blue_dark</item>
+        <item name="colorControlActivated">@color/blue_dark</item>
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="text_input_hint" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/h2</item>
+        <item name="android:textColor">@color/blue_dark</item>
+    </style>
+
+    <style name="text_input_error" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/h2</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="text_input_edit_text">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
 </resources>
