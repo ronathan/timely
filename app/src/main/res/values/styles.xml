@@ -49,6 +49,7 @@
     <style name="base_container">
         <item name="android:padding">@dimen/activity_padding</item>
         <item name="android:background">@color/colorPrimary</item>
+        <item name="android:clipChildren">false</item>
     </style>
 
     <!-- Timer -->

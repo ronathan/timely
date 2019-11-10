@@ -1,19 +1,22 @@
 package com.ronathan.timely.ui.timer
 
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.text.format.DateUtils
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.ViewCompat
 import androidx.fragment.app.FragmentManager
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.ronathan.timely.R
-import com.ronathan.timely.ui.category.CategoryPromptFragment
+import com.ronathan.timely.ui.category.CategoryPromptActivity
 import com.ronathan.utils.Stopwatch
 
 class TimerActivity : AppCompatActivity() {
@@ -27,8 +30,9 @@ class TimerActivity : AppCompatActivity() {
     }
 
     // region UI Properties
-    @BindView(R.id.timer_container) lateinit var timerContainer: ConstraintLayout
-    @BindView(R.id.timer) lateinit var timerTextView: TextView
+    @BindView(R.id.timerContainer) lateinit var timerContainer: ConstraintLayout
+    @BindView(R.id.timer) lateinit var timer: LinearLayout
+    @BindView(R.id.timerTextView) lateinit var timerTextView: TextView
 
     @OnClick(R.id.startButton)
     fun onStartClicked() {
@@ -73,6 +77,9 @@ class TimerActivity : AppCompatActivity() {
     }
 
     private fun showCategoryPrompt() {
-        fm.beginTransaction().add(R.id.timer_container, CategoryPromptFragment()).commit()
+        val intent = Intent(this, CategoryPromptActivity::class.java)
+        val options =
+            ActivityOptions.makeSceneTransitionAnimation(this, timer, ViewCompat.getTransitionName(timer)!!)
+        startActivity(intent, options.toBundle())
     }
 }

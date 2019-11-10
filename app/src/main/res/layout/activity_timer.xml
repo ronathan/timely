@@ -3,11 +3,29 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/timer_container"
+    android:id="@+id/timerContainer"
     style="@style/base_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/timer"
+        style="@style/timer"
+        android:transitionName="simple_fragment_transition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/timerTextView"
+            style="@style/timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="HH:MM:SS" />
+
+    </LinearLayout>
 
     <TextView
         style="@style/h2_white_bold"
@@ -16,22 +34,6 @@
         android:text="Timely"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        style="@style/timer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/timer"
-            style="@style/timer_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="HH:MM:SS" />
-
-    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/startButton"
